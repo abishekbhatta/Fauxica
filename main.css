@@ -1,0 +1,273 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin:0;
+    font-family: 'Poppins';
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+} 
+
+nav{
+    margin: 4em;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 4.1em;
+    margin: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+nav ul li a{
+    position: relative;
+}
+
+
+nav ul li a.active::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+
+}
+
+main{
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+
+}
+
+.left-col{
+    width: 45%;
+}
+
+.right-col{
+    flex-grow:1;
+}
+
+h1{
+    font-size: 5.2rem;
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    margin: 0;
+    line-height:100% ;
+}
+
+.subhead {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.cta-btns{
+    margin: 5em 0;
+}
+
+.cta-btns, .secondary-cta{
+    display: flex;
+    gap: 2em;
+}
+
+.primary-cta{
+    text-decoration: none;
+    background-color: #f2f0df;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+
+.secondary-cta{
+    color: black;
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: block;
+    padding: 1em 0;    
+}
+
+.secondary-cta span{
+    position: relative;
+}
+
+.secondary-cta svg{
+    width: 20px;
+    transition: transform 0.3s;
+}
+
+.news{
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    margin-top: 4.5em;
+    border-radius: 1.9em;
+    position: relative;
+    box-shadow: 12px 9px 30px 0px #ebebeb;
+}
+.news::before{
+    position:absolute;
+    content: "";
+    background: url('../images/confetti.svg');
+    width: 114px;
+    height: 107px;
+    top: -15px;
+    left: -20px; 
+}
+
+.employees{
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+    line-height: 100%; 
+}
+
+.details{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.card1{
+    grid-area: left;
+    background-image: url('../images/clothing1.jpg');
+}
+.card2{
+    grid-area: right;
+    background-image: url('../images/clothing2.jpg');
+
+}
+
+.card3{
+    grid-area: bottom;
+    background-image: url('../images/clothing3.jpg');
+    
+}
+
+
+.right-col{
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns:repeat(2,auto);
+    grid-template-areas: 
+        "left right"
+        "left bottom";
+}
+
+.card{
+    border-radius: 1.9em;
+    display: flex;
+    align-items: end;
+    padding: 1.1em;
+    background-size: 120%;
+    transition: background-size 800ms;
+}
+
+.card-details{
+    background: white;
+    border-radius: 1.0em;
+    padding: 2em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 800ms;
+
+}
+
+.card-details::before{
+    content: "";
+    position:absolute;
+    border-right: 2px solid #e4e4e4;
+    height: 65%;
+    top: 15px;
+    left: 180px;
+
+}
+
+.product-title{
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+}
+
+.product-label{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.product-price{
+    font-size: 1.7rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.card1{
+    position: relative;
+}
+
+.card1::before{
+    content: "";
+    position:absolute;
+    width: 206px;
+    height: 158px;
+    background-image: url("../images/tag.svg");
+    top: -4px;
+    left: -48px;
+}
+
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    width:0%;
+    border-bottom: 2px solid rgb(202, 202, 202);
+    bottom: -6px;
+    transition-property: width;
+    transition-duration: 0.3s;
+}
+
+nav ul li a:hover::before{
+    width: 25px;
+}
+
+.primary-cta:hover{
+    background-color: #e2d1bd;
+}
+
+.secondary-cta:hover svg{
+    transform: translateX(10px);
+}
+
+.secondary-cta:hover span{
+    text-decoration: underline;
+}
+
+.card:hover{
+    background-size: 130%;
+}
+
+.card:hover .card-details{
+    transform: translateY(-2px);
+}
+
+
